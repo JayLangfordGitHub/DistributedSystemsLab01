@@ -15,16 +15,21 @@ interface ContactInfo {
     extension: number;
   }
 
+interface ColleagueHistory {
+  current: Colleague[],
+  former: Colleague[]
+}
+
 const friend1: Friend = {
-    name: "Paul Fleming",
+    name: "Alex Fan",
     phone: "087-12345",
-    age: 25,
+    age: 24,
   };
   
   const friend2: Friend = {
-    name: "Jane Costello",
+    name: "Jordan Flynn",
     phone: "086--12345",
-    age: 31,
+    age: 40,
   };
   
   const friends = [friend1, friend2];
@@ -32,7 +37,7 @@ const friend1: Friend = {
   
   //   -------------------
   const colleague1: Colleague = {
-    name: "Ralph Graham",
+    name: "Robert Walsh",
     department: "Engineering",
     contact: {
       email: "rgraham@company.com",
@@ -41,7 +46,7 @@ const friend1: Friend = {
   };
   
   const colleague2: Colleague = {
-    name: "Patti Burke",
+    name: "Jon Walshe",
     department: "Finance",
     contact: {
       email: "pburke@company.com",
@@ -50,14 +55,15 @@ const friend1: Friend = {
   };
   
   const colleague3: Colleague = {
-    name: "Dean Sullivan",
+    name: "Evan Sinnott",
     department: "HR",
     contact: {
       email: "dos@company.com",
       extension: 125,
     },
   };
-  const colleagues = {
+
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
