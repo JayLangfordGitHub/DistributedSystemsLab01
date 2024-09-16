@@ -44,14 +44,12 @@ function secureFindFriends(
 
   function intersection(
     friends: Friend[],
-    colleagues: Colleague[]
-  ): FriendColleagueIntersection[] {
+    colleagues: Colleague[]): FriendColleagueIntersection[] {
     let result: FriendColleagueIntersection[] = [];
   
     friends.reduce((res, friend) => {
       const colleague = colleagues.find((col) => col.name === friend.name);
       if (colleague) {
-        // Add to result
         res.push({
           name: friend.name,
           age: friend.age,
